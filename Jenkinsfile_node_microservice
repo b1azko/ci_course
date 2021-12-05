@@ -34,5 +34,10 @@ pipeline {
                 echo "Deploying to PRD."
             }
         }
+        stage('test-prd') {
+            steps {
+                echo "Testing on PRD."
+            }
+        }
     }
 }
