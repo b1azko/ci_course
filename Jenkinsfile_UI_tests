@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+        parameters { 
+            string(name: 'ENVIRONMENT', defaultValue: 'DEV', description: 'Test Environment') 
+            }
+    stages { 
+        stage('Build') {
+            steps {
+                echo "Running UI tests on ${params.PERSON} environment."
+            }
+        }
+    }
+}
